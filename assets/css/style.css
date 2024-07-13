@@ -521,9 +521,11 @@ h6 {
   justify-content: center;
 }
 
+
+
 #hero .carousel-control-next-icon:hover,
 #hero .carousel-control-prev-icon:hover {
-  background: #ef372f;
+  background: #587666;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -722,8 +724,10 @@ section {
   z-index: -1;
 }
 
+
+
 .featured-services .icon-box:hover::before {
-  background: #ef372f;
+  background:#587666;
   top: 0;
   border-radius: 0px;
 }
@@ -794,8 +798,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #fff;
-  color: #ef372f;
+  background:#587666;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -918,7 +922,7 @@ section {
   width: 80px;
   height: 80px;
   margin-bottom: 20px;
-  background: #fff;
+  background:#587666;
   border-radius: 50%;
   transition: 0.5s;
   color: #ef372f;
@@ -967,6 +971,16 @@ section {
   line-height: 24px;
   font-size: 14px;
 }
+
+.nav-tabs .nav-item .nav-link h4 {
+  color: #587666; /* Default color */
+  cursor: pointer;
+}
+
+.nav-tabs .nav-item .nav-link.active h4 {
+  color: red; 
+}
+
 
 /*--------------------------------------------------------------
 # Appointments
@@ -1655,19 +1669,20 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #eeeeee;
+  background:#587666;
   padding: 0 0 30px 0;
-  color: #555555;
+  color: white;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #f6f6f6;
+  background: #587666;
   padding: 60px 0 30px 0;
 }
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  color: white;
 }
 
 #footer .footer-top .footer-info h3 {
@@ -1676,12 +1691,14 @@ section {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
+  color: white;
 }
 
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
+  color: white;
   font-family: "Roboto", sans-serif;
 }
 
@@ -1709,6 +1726,7 @@ section {
   font-size: 16px;
   font-weight: 600;
   position: relative;
+  color: white;
   padding-bottom: 12px;
 }
 
@@ -1740,7 +1758,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #555555;
+  color:white;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1839,4 +1857,9 @@ section {
 
 .box .amount-input.active {
   display: block;
+}
+
+
+.gradelist ul {
+  list-style-type: none;
 }
