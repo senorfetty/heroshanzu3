@@ -49,7 +49,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
+          {% block active-nav %}
           <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          {% endblock %}
           <li><a class="nav-link scrollto" href="#">Our School</a></li>
           <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -74,6 +76,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
+   {% block application %}
   <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
@@ -184,7 +187,7 @@
     <div class="text-center">
       <h3>Interested in Joining Our School?</h3>
       <p>Discover the opportunities at our school and start your journey with us today. We provide a supportive learning environment to help you achieve your academic goals.</p>
-      <a class="cta-btn scrollto" href="#">Apply Now</a>
+      <a class="cta-btn scrollto" href="{% url 'make_application' %}">Apply Now</a>
     </div>
       </div>
     </section>
@@ -879,17 +882,15 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form method="post"  class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
+                  {% csrf_token %}
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="7" placeholder="Message" required=""></textarea>
@@ -904,6 +905,7 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+{% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

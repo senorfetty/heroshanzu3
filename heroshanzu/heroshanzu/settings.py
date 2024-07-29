@@ -47,7 +47,7 @@ ROOT_URLCONF = 'heroshanzu.urls'
 import firebase_admin
 from firebase_admin import credentials
 
-cred = credentials.Certificate('C:/Users/rotic/Desktop/project/heroshanzu3/heroshanzu/serviceAccountKey.json')
+cred = credentials.Certificate('C:/Users/billy/heroshanzu3/heroshanzu/serviceAccountKey.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'heroshanzu-f4980.appspot.com'
 })
@@ -131,3 +131,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_PASSWORD = 'uzsbcndafvdpneea'
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'heroshanzu@gmail.com'
+EMAIL_USE_TLS = True
